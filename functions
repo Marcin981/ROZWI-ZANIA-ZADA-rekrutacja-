@@ -1,0 +1,44 @@
+ZADANIE 1.
+code_1 = "79-900"
+code_2 = "80-155"
+
+def code_generation(arg_1,arg_2):
+    new_codes = []
+    start = None
+    start = arg_1[0:2]
+    start += arg_1[3:6]
+    start = int(start)
+    start += 1
+    end = None
+    end = arg_2[0:2]
+    end += arg_2[3:6]
+    end = int(end)
+
+    for i in range(start,end,1):
+        i = str(i)
+        new = i[0:2] + "-" + i[2:5]
+        new_codes.append(new)
+    print(new_codes)
+    
+    
+    
+  ZADANIE 2.
+  def missing_elements(elements, n):
+    missing_list = []
+    for i in range(1, n + 1):
+        if i not in elements:
+            missing_list.append(i)
+    return missing_list
+    
+    
+  ZADANIE 3.
+  from decimal import *
+
+def generator():
+    list = []
+    i = Decimal('2.0')
+    while i<6:
+        list.append(i)
+        i = i + Decimal('0.5')
+
+    print(list)
